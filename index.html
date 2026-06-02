@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Website</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+body{
+    font-family:Georgia, serif;
+    background:linear-gradient(
+        to bottom,
+        #FFE066 0%,
+        #FFF3B0 50%,
+        #FFF9DB 100%
+    );
+    position:relative;
+}
+
+/* TITLE */
+
+.title{
+    position:absolute;
+    top:25px;
+    width:100%;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    color:black;
+}
+
+/* MOON */
+
+.moon{
+    position:absolute;
+    top:20px;
+    right:40px;
+    width:35px;
+    height:35px;
+    background:white;
+    border-radius:50%;
+}
+
+.moon::after{
+    content:"";
+    position:absolute;
+    left:10px;
+    width:35px;
+    height:35px;
+    background:#FFE066;
+    border-radius:50%;
+}
+
+/* STARS */
+
+.star{
+    position:absolute;
+    color:white;
+    font-size:14px;
+}
+
+.s1{top:30px;left:120px;}
+.s2{top:80px;left:220px;}
+.s3{top:100px;right:180px;}
+.s4{top:150px;right:120px;}
+
+/* SUN */
+
+.sun{
+    position:absolute;
+    top:58%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:75px;
+    height:75px;
+    background:#FFD43B;
+    border-radius:50%;
+    box-shadow:0 0 50px #FFD43B;
+}
+
+/* BIRDS */
+
+.bird{
+    position:absolute;
+    width:50px;
+    height:25px;
+}
+
+.bird::before,
+.bird::after{
+    content:"";
+    position:absolute;
+    width:25px;
+    height:12px;
+    border-top:3px solid black;
+    border-radius:50%;
+}
+
+.bird::before{
+    left:0;
+    transform:rotate(20deg);
+}
+
+.bird::after{
+    right:0;
+    transform:rotate(-20deg);
+}
+
+.b1{
+    top:240px;
+    left:180px;
+}
+
+.b2{
+    top:320px;
+    left:320px;
+    transform:scale(.8);
+}
+
+.b3{
+    top:280px;
+    right:260px;
+}
+
+.b4{
+    top:380px;
+    right:160px;
+}
+
+.b5{
+    top:470px;
+    left:58%;
+    transform:scale(.7);
+}
+
+/* CLOUDS */
+
+.cloud{
+    position:absolute;
+    background:rgba(255,255,255,0.45);
+    border-radius:100px;
+    filter:blur(3px);
+}
+
+.cloud1{
+    width:420px;
+    height:140px;
+    left:-60px;
+    bottom:-30px;
+}
+
+.cloud2{
+    width:500px;
+    height:170px;
+    right:-80px;
+    bottom:-40px;
+}
+
+.cloud3{
+    width:280px;
+    height:90px;
+    left:40%;
+    bottom:40px;
+}
+
+/* WEBSITE BUTTON */
+
+.menu-container{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+}
+
+.website-btn{
+    background:#FFD700;
+    color:black;
+    border:none;
+    padding:18px 70px;
+    font-size:28px;
+    font-weight:bold;
+    border-radius:40px;
+    cursor:pointer;
+    box-shadow:0 0 25px #FFD700;
+}
+
+.website-btn:hover{
+    transform:scale(1.03);
+}
+
+/* MENU */
+
+.menu{
+    display:none;
+    margin-top:15px;
+    background:#FFD700;
+    border-radius:20px;
+    padding:15px;
+    width:280px;
+    max-height:180px;
+    overflow-y:auto;
+    box-shadow:0 0 20px rgba(0,0,0,.2);
+}
+
+.menu a{
+    display:block;
+    text-decoration:none;
+    color:black;
+    font-size:18px;
+    font-weight:bold;
+    padding:12px;
+    margin:5px 0;
+    border-radius:10px;
+}
+
+.menu a:hover{
+    background:rgba(255,255,255,.25);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="title">
+    Welcome to My Website
+</div>
+
+<div class="moon"></div>
+
+<div class="star s1">✦</div>
+<div class="star s2">✦</div>
+<div class="star s3">✦</div>
+<div class="star s4">✦</div>
+
+<div class="bird b1"></div>
+<div class="bird b2"></div>
+<div class="bird b3"></div>
+<div class="bird b4"></div>
+<div class="bird b5"></div>
+
+<div class="sun"></div>
+
+<div class="cloud cloud1"></div>
+<div class="cloud cloud2"></div>
+<div class="cloud cloud3"></div>
+
+<div class="menu-container">
+
+    <button class="website-btn" onclick="toggleMenu()">
+        Website
+    </button>
+
+    <div id="menu" class="menu">
+
+        <a href="https://app.beamse.pro/gen/Sunhub" target="_blank">Astral site</a>
+
+        <a href="https://www.logged.tg/auth/sunhub" target="_blank">Injuries site</a>
+
+        <a href="https://app.beamers.si/u/Sunhub" target="_blank">Splunk site</a>
+      
+        <a href="https://bloxflip.com/" target="_blank">Gambling</a>
+
+    </div>
+
+</div>
+
+<script>
+
+function toggleMenu(){
+
+    var menu = document.getElementById("menu");
+
+    if(menu.style.display === "block"){
+        menu.style.display = "none";
+    }else{
+        menu.style.display = "block";
+    }
+
+}
+
+</script>
+
+</body>
+</html>

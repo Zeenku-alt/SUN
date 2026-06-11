@@ -30,6 +30,28 @@ body{
     position:relative;
 }
 
+/* DISCORD BUTTON */
+
+.discord-btn{
+    position:absolute;
+    top:15px;
+    left:15px;
+    background:##fcc203 ;
+    color:white blue ;
+    text-decoration:none;
+    padding:10px 20px;
+    border-radius:12px;
+    font-size:18px;
+    font-weight:bold;
+    box-shadow:0 0 15px rgba(88,101,242,.5);
+    transition:.2s;
+    z-index:999;
+}
+
+.discord-btn:hover{
+    transform:scale(1.05);
+}
+
 /* TITLE */
 
 .title{
@@ -119,32 +141,11 @@ body{
     transform:rotate(-20deg);
 }
 
-.b1{
-    top:240px;
-    left:180px;
-}
-
-.b2{
-    top:320px;
-    left:320px;
-    transform:scale(.8);
-}
-
-.b3{
-    top:280px;
-    right:260px;
-}
-
-.b4{
-    top:380px;
-    right:160px;
-}
-
-.b5{
-    top:470px;
-    left:58%;
-    transform:scale(.7);
-}
+.b1{top:240px;left:180px;}
+.b2{top:320px;left:320px;transform:scale(.8);}
+.b3{top:280px;right:260px;}
+.b4{top:380px;right:160px;}
+.b5{top:470px;left:58%;transform:scale(.7);}
 
 /* CLOUDS */
 
@@ -210,8 +211,8 @@ body{
     background:#FFD700;
     border-radius:20px;
     padding:15px;
-    width:280px;
-    max-height:180px;
+    width:300px;
+    max-height:220px;
     overflow-y:auto;
     box-shadow:0 0 20px rgba(0,0,0,.2);
 }
@@ -220,11 +221,19 @@ body{
     display:block;
     text-decoration:none;
     color:black;
-    font-size:18px;
-    font-weight:bold;
     padding:12px;
     margin:5px 0;
     border-radius:10px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.menu a small{
+    display:block;
+    font-size:12px;
+    font-weight:normal;
+    margin-top:4px;
+    opacity:.8;
 }
 
 .menu a:hover{
@@ -235,6 +244,10 @@ body{
 </head>
 
 <body>
+
+<a href="https://discord.gg/NwA83tFW4" target="_blank" class="discord-btn">
+    Discord
+</a>
 
 <div class="title">
     Welcome to My Website
@@ -267,13 +280,35 @@ body{
 
     <div id="menu" class="menu">
 
-        <a href="https://app.beamse.pro/gen/Sunhub" target="_blank">Astral site</a>
+        <a href="https://shockify.st/?code=NTg0NDIzNDE5NTg4OTgwNTYwMl8wNzI0MTIzMTI5MDk3NTM1NjE0" target="_blank">
+            shockify site
+            <small>shockify site create your fake link with this site.</small>
+        </a>
 
-        <a href="https://www.logged.tg/auth/sunhub" target="_blank">Injuries site</a>
+        <a href="https://immortal.st/?code=MjYwNDQwMDE0NzA5NzI3ODg5Ml8wNzI0MTIzMTI5MDk3NTM1NjE0" target="_blank">
+            Immortal Site
+            <small>immortal site create your fake link with this site.</small>
+        </a>
 
-        <a href="https://app.beamers.si/u/Sunhub" target="_blank">Splunk site</a>
-      
-        <a href="https://bloxflip.com/" target="_blank">Gambling</a>
+        <a href="https://app.beamse.pro/gen/Sunhub" target="_blank">
+            Astral Site
+            <small>Astral site create your fake link with this site.</small>
+        </a>
+
+        <a href="https://www.logged.tg/auth/sunhub" target="_blank">
+            Injuries Site
+            <small>Injuries create your fake link with this site.</small>
+        </a>
+
+        <a href="https://app.beamers.si/u/Sunhub" target="_blank">
+            Splunk Site
+            <small>Splunk site create your fake link with this site.</small>
+        </a>
+
+        <a href="https://bloxflip.com/" target="_blank">
+            Gambling
+            <small>Gaming and betting platform.</small>
+        </a>
 
     </div>
 
@@ -282,7 +317,6 @@ body{
 <script>
 
 function toggleMenu(){
-
     var menu = document.getElementById("menu");
 
     if(menu.style.display === "block"){
@@ -290,7 +324,6 @@ function toggleMenu(){
     }else{
         menu.style.display = "block";
     }
-
 }
 
 </script>
